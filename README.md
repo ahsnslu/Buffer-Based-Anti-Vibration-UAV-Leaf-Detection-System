@@ -8,8 +8,8 @@ oranda hatalı tespite (false positive/negative) yol açar.
 Bu yazılım, sorunu aşmak için Arabellek Tabanlı Gecikmeli Analiz (Buffer-Based Delayed Analysis) yöntemini kullanır:
 
 [Drone Kamerası] ──► [Anlık Görüntü (Canlı Akış)] ──►[5 Saniyelik FIFO Arabellek (RAM)]
-                                                                      |
-       [Kararlı Yaprak Analizi] ◄── [Titreşimi Sönümlenmiş Kare] ◄────┘
+                                                                           |
+            [Kararlı Yaprak Analizi] ◄── [Titreşimi Sönümlenmiş Kare] ◄────┘
 
 1. FIFO Kuyruğu (First-In-First-Out): Drone kamerası saniyede örneğin 30 kare (FPS) çekerken, bu görüntüler anlık olarak RAM üzerinde tutulan 5 saniyelik bir kuyruğa (collections.deque) aktarılır.
 2. Yeniden Oynatma ve Kararlı Analiz: Sistem canlı yayını kesintisiz olarak ekranda akıtırken; analiz motoru, dondaki anlık sarsıntılardan etkilenmeyen tam 5 saniye önceki kareyi arabellekten geri çağırır (tekrar oynatır).
