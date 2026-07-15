@@ -6,10 +6,8 @@ tabanlı bir bilgisayarlı görü (computer vision) sistemidir.
 Dronlar havada sabit kalmaya çalışırken sürekli olarak mikroskobik veya makroskobik titreşimler üretir. Bu durum, kameranın anlık olarak odaklanmasını zorlaştırır, görüntüyü bulandırır ve canlı yaprak analizlerinde yüksek
 oranda hatalı tespite (false positive/negative) yol açar.
 Bu yazılım, sorunu aşmak için Arabellek Tabanlı Gecikmeli Analiz (Buffer-Based Delayed Analysis) yöntemini kullanır:
+<img width="1024" height="99" alt="image" src="https://github.com/user-attachments/assets/ed2475f4-848c-47cf-88f3-3230ff218d9c" />
 
-[Drone Kamerası] ──► [Anlık Görüntü (Canlı Akış)] ──►[5 Saniyelik FIFO Arabellek (RAM)]
-                                                                           |
-            [Kararlı Yaprak Analizi] ◄── [Titreşimi Sönümlenmiş Kare] ◄────┘
 
 1. FIFO Kuyruğu (First-In-First-Out): Drone kamerası saniyede örneğin 30 kare (FPS) çekerken, bu görüntüler anlık olarak RAM üzerinde tutulan 5 saniyelik bir kuyruğa (collections.deque) aktarılır.
 2. Yeniden Oynatma ve Kararlı Analiz: Sistem canlı yayını kesintisiz olarak ekranda akıtırken; analiz motoru, dondaki anlık sarsıntılardan etkilenmeyen tam 5 saniye önceki kareyi arabellekten geri çağırır (tekrar oynatır).
