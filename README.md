@@ -6,6 +6,8 @@ tabanlı bir bilgisayarlı görü (computer vision) sistemidir.
 Dronlar havada sabit kalmaya çalışırken sürekli olarak mikroskobik veya makroskobik titreşimler üretir. Bu durum, kameranın anlık olarak odaklanmasını zorlaştırır, görüntüyü bulandırır ve canlı yaprak analizlerinde yüksek
 oranda hatalı tespite (false positive/negative) yol açar.
 Bu yazılım, sorunu aşmak için Arabellek Tabanlı Gecikmeli Analiz (Buffer-Based Delayed Analysis) yöntemini kullanır:
+
+
 <img width="1024" height="99" alt="image" src="https://github.com/user-attachments/assets/ed2475f4-848c-47cf-88f3-3230ff218d9c" />
 
 
