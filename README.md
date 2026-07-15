@@ -8,7 +8,9 @@ oranda hatalı tespite (false positive/negative) yol açar.
 Bu yazılım, sorunu aşmak için Arabellek Tabanlı Gecikmeli Analiz (Buffer-Based Delayed Analysis) yöntemini kullanır:
 
 
+
 <img width="1024" height="99" alt="image" src="https://github.com/user-attachments/assets/ed2475f4-848c-47cf-88f3-3230ff218d9c" />
+
 
 
 1. FIFO Kuyruğu (First-In-First-Out): Drone kamerası saniyede örneğin 30 kare (FPS) çekerken, bu görüntüler anlık olarak RAM üzerinde tutulan 5 saniyelik bir kuyruğa (collections.deque) aktarılır.
